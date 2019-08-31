@@ -117,10 +117,26 @@ namespace SorterApp
 
                 // Reads text from file
                 case "2":
+                    Console.Clear();
+                    Thread.Sleep(TimeSpan.FromSeconds(1));
+                    Console.WriteLine("Loading.....");
+                    Thread.Sleep(TimeSpan.FromSeconds(1));
+                    Console.Clear();
+
+                    // location file / path
+                    Console.WriteLine("Type the location of the file you want to read....");
+                    Console.Write("->");
+                    FilePath = Console.ReadLine();
+                    // file name
+                    Console.WriteLine("Type the name of the file you want to read....");
+                    Console.Write("->");
+                    FileName = Console.ReadLine();
+                    FileManager.ReadTextFromTheFileAsync(FileName, FileFormatTypeExtension.Text, FilePath);
                     break;
    
                 // Close program        
                 case "3":
+                    Console.WriteLine("Thanks... See you latter..");
                     BreakLoop = false;
                     break;
 
