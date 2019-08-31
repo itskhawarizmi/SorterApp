@@ -111,6 +111,7 @@ namespace SorterApp
                     Console.WriteLine("Type the text you want to add to the file");
                     Console.Write("->");
                     FileText = Console.ReadLine();
+                    FileManager.WriteTextToFileAsync(FileName, FileFormatTypeExtension.Text, FilePath, IsAppend, FileText);
 
                     break;
 
