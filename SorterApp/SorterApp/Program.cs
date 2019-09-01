@@ -30,7 +30,7 @@ namespace SorterApp
         /// The format of the file. Make sure we have 
         /// set the file format correctly
         /// </summary>
-        private static string FileFormat = ".txt";
+        private static FileFormatTypeExtension FileFormat = FileFormatTypeExtension.Text;
 
         /// <summary>
         /// The text we want to add to the file.
@@ -111,7 +111,7 @@ namespace SorterApp
                     Console.WriteLine("Type the text you want to add to the file");
                     Console.Write("->");
                     FileText = Console.ReadLine();
-                    FileManager.WriteTextToFileAsync(FileName, FileFormatTypeExtension.Text, FilePath, IsAppend, FileText);
+                    FileManager.WriteTextToFileAsync(FileName, FileFormat, FilePath, IsAppend, FileText);
 
                     break;
 
@@ -131,7 +131,7 @@ namespace SorterApp
                     Console.WriteLine("Type the name of the file you want to read....");
                     Console.Write("->");
                     FileName = Console.ReadLine();
-                    FileManager.ReadTextFromTheFileAsync(FileName, FileFormatTypeExtension.Text, FilePath);
+                    FileManager.ReadTextFromTheFileAsync(FileName, FileFormat, FilePath);
                     break;
    
                 // Close program        

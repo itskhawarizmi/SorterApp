@@ -117,8 +117,9 @@ namespace SorterApp
 
                     foreach (var item in texts)
                         fileWriter.WriteLine(item);
-                    
-                    
+
+
+                    Console.WriteLine("Good job!, Your data has been written to the file successfully...");
                 }
 
             }
@@ -201,10 +202,7 @@ namespace SorterApp
             Console.WriteLine(".......");
             Thread.Sleep(TimeSpan.FromSeconds(2));
             Console.WriteLine(".........");
-
-
-
-            Console.ReadLine();
+            
             
         }
 
